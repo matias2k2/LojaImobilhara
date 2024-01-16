@@ -1,0 +1,38 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing:  border-box;
+    font-family: 'Times New Roman', Times, serif;
+
+}
+header{
+    background:red ;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 20px 100px;
+    width: 100%;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+
+}
+.logo
+{
+    font-size: 2em;
+    color: #fff;
+    user-select: none;
+}
+
+.navItem a
+{
+    position: relative;
+    font-size: 1.1em;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 40px;
+}
