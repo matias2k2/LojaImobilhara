@@ -93,3 +93,11 @@ header{
     transform-origin: left;
     transform: scale(1);
 }
+
+.centro
+{
+    position: relative;
+    width: 400px;
+    height: 440px;
+    background: transparent;
+}
