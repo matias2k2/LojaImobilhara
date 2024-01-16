@@ -28,6 +28,17 @@ public class Controller {
         return mv;
         
     }
+
+    //Chamada da nossa tela de login
+    @RequestMapping("/login")
+    public ModelAndView login()
+    {
+        ModelAndView mv = new ModelAndView();
+        mv.setViewName("login/login");
+        mv.addObject("msg", "mensagem vind direitamente do controller");
+        return mv;
+        
+    }
     
 
     @GetMapping("/BoasVindas/{nome}")

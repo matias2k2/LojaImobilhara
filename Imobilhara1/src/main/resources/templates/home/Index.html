@@ -15,54 +15,13 @@
         <h2 class="logo">Imovel</h2>
         <nav class="navItem">
             <a th:href="@{/}">Home</a>
-            <a th:href="@{#}">Sobre nos</a>
-            <a th:href="@{#}">Servicos</a>
+            <a th:href="@{/#}">Sobre nos</a>
+            <a th:href="@{/#}">Servicos</a>
             <button class="btLogin">Login</button>
         </nav>
     </header>
 
-        <div class="centro">
-            <div class="from-box login">
-                <h2>Login</h2>
-                <from action="#">
-                    <div class="input-box">
-                        <span class="icon">
-                            <ion-icon name="mail-outline"></ion-icon>
-                        </span>
-                        <input type="email" required>
-                        <label>Email</label>
-                    </div>
-                    <div class="input-box">
-                        <span class="icon">
-                            <ion-icon name="lock-closed-outline"></ion-icon>
-                        </span>
-                        <input type="email" required>
-                        <label>Password</label>
-                    </div>
-
-                    <div class="forgot">
-                        <label>
-                            <input type="checkbox">
-                            Lembre de mim
-                            <a th:href="@{/recuperaSenha}"></a>
-                        </label>
-                        <button type="submit" class="btn">
-                            Login
-                        </button>
-                        <div class="login-cadastro">
-                            <p>Não tem uma conta?
-                                <a href="@{/criaConta}">Cria conta</a>
-                            
-                            </p>
-
-                        </div>   
-                    <div>
-
-
-                </from>
-            </div>
-        <div>
-
+      
 
    <script src ="js/jquery.spec.js"></script>
    <script src="js/bootstrap.js"></script>
