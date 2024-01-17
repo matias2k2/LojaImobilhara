@@ -34,7 +34,7 @@ public class Controller {
     public ModelAndView login()
     {
         ModelAndView mv = new ModelAndView();
-        mv.setViewName("login/login");
+        mv.setViewName("login/cadastra");
         mv.addObject("msg", "mensagem vind direitamente do controller");
         return mv;
         
