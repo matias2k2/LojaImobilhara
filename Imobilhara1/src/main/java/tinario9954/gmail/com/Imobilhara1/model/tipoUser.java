@@ -13,16 +13,18 @@ public class tipoUser {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long idtipo;
+    private long idTipo;
+    public long getIdTipo() {
+        return idTipo;
+    }
+
+    public void setIdTipo(long idTipo) {
+        this.idTipo = idTipo;
+    }
+
     private String descricao;
 
-    public long getIdtipo() {
-        return idtipo;
-    }
-
-    public void setIdtipo(long idtipo) {
-        this.idtipo = idtipo;
-    }
+   
 
     public String getDescricao() {
         return descricao;

@@ -11,51 +11,35 @@
 <body>
 
 
-    <header>
-        <h2 class="logo">Imovel</h2>
-        <nav class="navItem">
-            <a th:href="@{/}">Home</a>
-            <a th:href="@{/#}">Sobre nos</a>
-            <a th:href="@{/#}">Servicos</a>
-            <button class="btLogin">Login</button>
-        </nav>
-    </header>
-
+        <div th:replace="fragmentos/barraMenuLogin :: cabecalho"></div>
         <div class="centro">
-            <span class="icon-close">
-                <ion-icon name="close-outline"></ion-icon>
-            </span>
-
             <div class="from-box login">
                 <h2>Login</h2>
-                <from action="#" method="POST">
+                <form action="/logar" method="POST" >
                     <div class="input-box">
                         <span class="icon">
                             <ion-icon name="mail-outline"></ion-icon>
                         </span>
-                        <input type="email" required>
+                        <input type="email" id="email" name="email"  required>
                         <label>Email</label>
                     </div>
                     <div class="input-box">
                         <span class="icon">
                             <ion-icon name="lock-closed-outline"></ion-icon>
                         </span>
-                        <input type="password" required>
+                        <input type="password" id="senha" name="senha" required>
                         <label>Password</label>
                     </div>
-
-                    
                     <button type="submit" class="btn">
                             Login
                     </button>
-                    
                     <div class="login-cadastro">
                         <p>Não tem uma conta?
-                        <a href="@{/criaConta}">Cria conta</a>
+                        <a href="@{cadastra}">Cria conta</a>
                         </p>
                     </div>
 
-                </from>
+                </form>
             </div>
         <div>
 

@@ -9,18 +9,19 @@ import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "pessoas")
+@Table(name = "Usuario")
 public class Usuario {
 
     @Id
-    @GeneratedValue(strategy =  GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long idUsuario;
     private String nome;
-    private String emial;
+    private String email;
+
     private String senha;
 
     @ManyToOne
-    @JoinColumn(name = "TipoUser")
+    @JoinColumn(name = "fkTipoUser")
     private tipoUser TipoUser;
 
     // Getter e Setter Metodo
@@ -40,20 +41,20 @@ public class Usuario {
         this.nome = nome;
     }
 
-    public String getEmial() {
-        return emial;
-    }
-
-    public void setEmial(String emial) {
-        this.emial = emial;
-    }
-
     public String getSenha() {
         return senha;
     }
 
     public void setSenha(String senha) {
         this.senha = senha;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 
 }
