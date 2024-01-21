@@ -1,7 +1,5 @@
 package tinario9954.gmail.com.Imobilhara1.controllers;
 
-import java.util.Optional;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -10,7 +8,7 @@ import org.springframework.ui.Model;
 
 import tinario9954.gmail.com.Imobilhara1.Interfaces.UsuarioInt;
 import tinario9954.gmail.com.Imobilhara1.model.Usuario;
-
+import tinario9954.gmail.com.Imobilhara1.model.tipoUser;
 @Controller
 public class UsuarioController {
     
@@ -24,7 +22,6 @@ public class UsuarioController {
       }
      //Fazer o logim na nossa tela
       
-     
      @GetMapping("/login")
       public String login()
       {
@@ -43,5 +40,30 @@ public class UsuarioController {
       model.addAttribute("msg", "mensagem vind direitamente do controller");
       return "login/login";
       }
+      //Rota da tela cadastra 
+      @GetMapping("/cadastras")
+      public String cadastra()
+      {
+        return "login/cadastra";
+      }
+      //Valida o nosso cadastro
+      @PostMapping("/validar")
+      public String cadastraValidar(Model model,Usuario dados,tipoUser pt,String confrim)
+      {
+        if(dados.getSenha().equals(confrim))
+        {
+          Usuario add= this.repe.validar(dados.getNome(), dados.getEmail(), dados.getSenha());
+          tipoUser tpAdd=this.repe.inserirTipoUsuario(pt.getDescricao());
+          if(add != null && tpAdd!= null)
+          {
+           return "redirect:/";
+          }
+        }
+        model.addAttribute("msg", "mensagem vind direitamente do controller");
+        return "login/cadastra";
+        
+
+      }
+
      
 }

@@ -10,41 +10,37 @@
 </head>
 <body>
 
-
- 
-
-        <div class="centro">
-            
-
+    <div th:replace="fragmentos/fragCadastro :: cabecalho1"></div>
+    <div class="centro">
             <div class="from-box login">
                 <h2>Cadastro</h2>
-                <from action="/cadastra" th:object="${usuario}">
+                <form action="/validar" method="POST">
                     <div class="input-box">
                         <span class="icon">
                             <ion-icon name="person-outline"></ion-icon>
                         </span>
-                        <input type="text" th:field="*{nome}" required>
+                        <input type="text"  name="nome" required>
                         <label>Nome</label>
                     </div>
                     <div class="input-box">
                         <span class="icon">
                             <ion-icon name="mail-outline"></ion-icon>
                         </span>
-                        <input type="email" th:field="*{email}" required>
+                        <input type="email"  name="email" required>
                         <label>Email</label>
                     </div>
                     <div class="input-box">
                         <span class="icon">
                             <ion-icon name="lock-closed-outline"></ion-icon>
                         </span>
-                        <input type="password" th:field="*{senha}"required>
+                        <input type="password"  name="senha" required>
                         <label>Senha</label>
                     </div>
                     <div class="input-box">
                         <span class="icon">
                             <ion-icon name="lock-closed-outline"></ion-icon>
                         </span>
-                        <input type="password" required>
+                        <input type="password"  name="confrim" required>
                         <label>Confirma Senha</label>
                     </div>
 
@@ -52,29 +48,31 @@
                         <span class="icon">
                             <ion-icon name="menu-outline"></ion-icon>
                         </span>
-                        <select class="opecao" th:field="*{descricao}" >
+                        <select class="opecao" name="descricao" >
                             <option value="gestor">Gestor</option>
                             <option value="administrador">Administrador</option>
                             <option value="cliente">Cliente</option>
                         </select>
                     </div>
-                    <div th:if="${erro !=null}" th:text="${erro}" class="alert alert-success" role="alert">
+                    <div th:if="${erro != null}" th:text="${erro}" class="alert alert-success" role="alert">
                     </div>
                     <button type="submit" class="btn">
                             Cadastra
                     </button>
                     <div class="login-cadastro">
                         <p>
-                        <a href="@{login}"> Fazer o login</a>
+                        <a th:href="@{/login}"> Fazer o login</a>
                         </p>
                        
                     </div>
 
-                </from>
+                </form>
             </div>
         <div>
 
 
+   
+   
    <script src ="js/jquery.spec.js"></script>
    <script src="js/bootstrap.js"></script>
    <script src ="js/script.js"></script>

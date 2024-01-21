@@ -1,0 +1,56 @@
+body
+{
+    min-height: 100vh;
+    background-image:url('/img/mobilia.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+nav.nav-produtos
+{
+    background: transparent;
+    color: #2E5902;
+   
+}
+
+.nav-produtos .nav li
+{
+    position: relative;
+    padding: 10px 0;
+}
+nav.nav-produtos ul.nav li {
+    position: relative;
+    padding: 10px 0;
+}
+
+nav.nav-produtos ul.nav li svg {
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+nav.nav-produtos ul.nav li:hover {
+    background: transparent;
+}
+
+nav.nav-produtos ul.nav li:hover ul.nav {
+    display: block;
+}
+
+nav.nav-produtos ul.nav li ul.nav {
+    z-index: 999;
+    display: none;
+    position: absolute;
+    top: 44px;
+    background: #BFB78F;
+    border-top: solid transparent 10px;
+    width: 100%;
+    padding: 20px 25px;
+}
+
+nav.nav-produtos ul.nav li ul.nav a {
+    text-decoration: none;
+    color: #fff;
+}
+
+
+

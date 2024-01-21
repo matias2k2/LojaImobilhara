@@ -33,19 +33,18 @@
                     <button type="submit" class="btn">
                             Login
                     </button>
-                    <div class="login-cadastro">
-                        <p>Não tem uma conta?
-                        <a href="@{cadastra}">Cria conta</a>
-                        </p>
-                    </div>
-
                 </form>
+
+                <nav class="login-cadastro">
+                    <p>Não tem uma conta?
+                    <a th:href="@{/cadastras}">Cria conta</a>
+                    </p>
+                </nav>
+
             </div>
         <div>
-
-
-   <script src ="js/jquery.spec.js"></script>
-   <script src="js/bootstrap.js"></script>
+    
+    
    <script src ="js/script.js"></script>
    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
