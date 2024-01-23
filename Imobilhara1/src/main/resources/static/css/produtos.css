@@ -1,0 +1,52 @@
+/* Converted CSS for .produtos */
+.produtos {
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.produtos .button a {
+    text-decoration: none;
+    color: #fff; /* Make sure to replace $branco with the actual color value */
+}
+
+.produtos p {
+    text-indent: 10px;
+    text-align: justify;
+    text-decoration: none;
+}
+
+.produtos .produtos-container {
+    margin: 30px 0;
+    text-decoration: none;
+}
+
+.produtos .produtos-container .img-fluid {
+    width: 297px;
+    height: 326.3px;
+    text-decoration: none;
+}
+
+.produtos .produtos-container .produtos-itens {
+    color: #00001c;
+    text-decoration: none;
+}
+
+.produtos .produtos-container .produtos-itens h2 {
+    font-size: 19px;
+    text-decoration: none;
+}
+
+.produtos .produtos-container .produtos-itens .produtos-stars {
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.produtos .produtos-container .produtos-itens .produtos-stars svg {
+    fill: yellow; /* Make sure to replace $amarelo with the actual color value */
+    text-decoration: none;
+}
+
+.produtos .produtos-container .produtos-itens .produtos-prco {
+    font-size: 16px;
+    text-decoration: none;
+}

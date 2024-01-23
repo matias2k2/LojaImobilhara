@@ -10,73 +10,92 @@
 </head>
 <body>
 
-    <div th:replace="fragmentos/fragCadastro :: cabecalho1"></div>
-    <div class="centro">
-            <div class="from-box login">
-                <h2>Cadastro</h2>
-                <form action="/validar" method="POST">
+    <div class="container1">
+        <div class="form-image">
+            <img src="./img/undraw_empty_cart_co35.svg" alt="">
+        </div>
+        <div class="from">
+            <form action="/validar" method="POST">
+                <!--Nosso cabecalho do fromulario -->
+                 <div class="form-header">
+                    <div class="title">
+                        <h1>Cadastre-se</h1>
+                    </div>
+                    <div class="login-button">
+                         <button> <a th:href="@{/}">Home</a></button>
+                    </div>
+                 </div>
+
+                                     <!--Aria do nosso input de testes ETC-->
+                <div class="input-group">
+                    
                     <div class="input-box">
-                        <span class="icon">
-                            <ion-icon name="person-outline"></ion-icon>
-                        </span>
-                        <input type="text"  name="nome" required>
-                        <label>Nome</label>
+                         <label for="firstname">Primero nome</label>
+                         <input type="text" name="IDfirstname" id="IDfirstname" placeholder="Digite o seu primero nome" required>
                     </div>
                     <div class="input-box">
-                        <span class="icon">
-                            <ion-icon name="mail-outline"></ion-icon>
-                        </span>
-                        <input type="email"  name="email" required>
-                        <label>Email</label>
-                    </div>
-                    <div class="input-box">
-                        <span class="icon">
-                            <ion-icon name="lock-closed-outline"></ion-icon>
-                        </span>
-                        <input type="password"  name="senha" required>
-                        <label>Senha</label>
-                    </div>
-                    <div class="input-box">
-                        <span class="icon">
-                            <ion-icon name="lock-closed-outline"></ion-icon>
-                        </span>
-                        <input type="password"  name="confrim" required>
-                        <label>Confirma Senha</label>
+                     <label for="lastname">Sobrenome</label>
+                     <input type="text" name="lastname" id="IDlastname" placeholder="Digite o seu sobre nome" required>
+                     </div>
+                     <div class="input-box">
+                         <label for="email">Email</label>
+                         <input type="email" name="email" id="IDemail" placeholder="Email" required>
                     </div>
 
                     <div class="input-box">
-                        <span class="icon">
-                            <ion-icon name="menu-outline"></ion-icon>
-                        </span>
-                        <select class="opecao" name="descricao" >
-                            <option value="gestor">Gestor</option>
-                            <option value="administrador">Administrador</option>
-                            <option value="cliente">Cliente</option>
-                        </select>
-                    </div>
-                    <div th:if="${erro != null}" th:text="${erro}" class="alert alert-success" role="alert">
-                    </div>
-                    <button type="submit" class="btn">
-                            Cadastra
-                    </button>
-                    <div class="login-cadastro">
-                        <p>
-                        <a th:href="@{/login}"> Fazer o login</a>
-                        </p>
-                       
+                        <label for="lastname">Genero</label>
+                        <input type="text" name="genero" id="IDlastname" placeholder="Genero" required>
                     </div>
 
-                </form>
+
+
+                    <div class="input-box">
+                        <label for="password">Confirme Senha</label>
+                        <input type="password" name="senha" id="IDpassword" placeholder="Confime Senha" required>
+                    </div>
+                    
+                    <div class="input-box">
+                     <label for="telefone">  Telefone</label>
+                     <input type="tel" name="telefone" id="IDtelefone" placeholder="telefone" required>
+                     </div>
+                     <div class="input-box">
+                         <label for="password">Senha</label>
+                         <input type="password" name="senha" id="IDpassword" placeholder="Senha" required>
+                     </div>
+                     <div class="input-box">
+                         <label for="password">Confirme Senha</label>
+                         <input type="password" name="senha" id="IDpassword" placeholder="Confime Senha" required>
+                     </div>
+
+
             </div>
-        <div>
+              <!--Fim Aria-->
+
+                <div class="gender-inputs">
+                    <div class="gender-title">
+                        <h6>Genero</h6>
+                    </div>
+                    <!--Os generos estao armazenado aqui -->             
+
+                <div class="continue-button">
+                    <button><a href="./indexHome.html">Confirmar</a></button>
+                </div>
+ 
+            </form>
+
+        </div>
+    </div>
 
 
    
+
+            
    
    <script src ="js/jquery.spec.js"></script>
    <script src="js/bootstrap.js"></script>
    <script src ="js/script.js"></script>
    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
 </body>
 </html>

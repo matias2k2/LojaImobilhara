@@ -9,56 +9,15 @@
   
     <link rel="stylesheet" href="css/navProdutos.css">
     <link rel="stylesheet" href="css/corpo.css">
+    <link rel="stylesheet" href="css/cabesalho.css">
+    <link rel="stylesheet" href="css/produtos.css">
    
 </head>
 <body>
 
-    <header class="container-fluid">
-         
-        <section class="container">
-                <!--O primero nosso haeder esta em um linha apenas-->
-                <article class="row d-flex align-items-center">
-                     <a th:href="@{/}" class="col-md-2">
-                         <!--Logotipos-->
-                         <img src="img/logo.png" alt="Logo da empresa" class="logo">
-                     </a>
-                     <form action="#" class="col-md-7 d-flex align-items-center">
-                         <input type="text" name="nome" id="idname" placeholder="Procura telefones  aqui">
-                          <button class="d-flex align-items-center">
-                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-                                 <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
-                               </svg>
-                          </button>
-                     </form>
-                       <!--Nosso link onde tem o menu-->
-                     <ul class="col-md-3 nav d-flex justify-content-around">
-                         <li class="nav-item">
-                              <a th:href="@{/login}">
-                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
-                                     <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4Zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10Z"/>
-                                   </svg>
-                                 Entrar
-                             </a>
-                         </li>
-                         <li class="nav-item">
-                             <span class="notificacao d-flex align-items-center justify-content-center">3</span>
-                              <a th:href="@{/}">
-                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart-fill" viewBox="0 0 16 16">
-                                     <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
-                                   </svg>
-                                 compra
-                             </a>
-
-                         </li>
-
-                     </ul>
-                </article>
-        </section>
-    </header>
-
-
-
-    <nav class="container-fluid nav-produtos">
+<div th:replace="fragmentos/cabesalho :: cab"></div>
+    
+  <nav class="container-fluid nav-produtos">
         <section class="container">
             <ul class="nav">
                 <li class="col-xl-2 col-lg-6 col-md-12 nav-item d-flex align-items-center">
@@ -66,7 +25,7 @@
                         <path fill-rule="evenodd" d="M5 11.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5z"/>
                         <path d="M2.242 2.194a.27.27 0 0 1 .516 0l.162.53c.035.115.14.194.258.194h.551c.259 0 .37.333.164.493l-.468.363a.277.277 0 0 0-.094.3l.173.569c.078.256-.213.462-.423.3l-.417-.324a.267.267 0 0 0-.328 0l-.417.323c-.21.163-.5-.043-.423-.299l.173-.57a.277.277 0 0 0-.094-.299l-.468-.363c-.206-.16-.095-.493.164-.493h.55a.271.271 0 0 0 .259-.194l.162-.53zm0 4a.27.27 0 0 1 .516 0l.162.53c.035.115.14.194.258.194h.551c.259 0 .37.333.164.493l-.468.363a.277.277 0 0 0-.094.3l.173.569c.078.255-.213.462-.423.3l-.417-.324a.267.267 0 0 0-.328 0l-.417.323c-.21.163-.5-.043-.423-.299l.173-.57a.277.277 0 0 0-.094-.299l-.468-.363c-.206-.16-.095-.493.164-.493h.55a.271.271 0 0 0 .259-.194l.162-.53zm0 4a.27.27 0 0 1 .516 0l.162.53c.035.115.14.194.258.194h.551c.259 0 .37.333.164.493l-.468.363a.277.277 0 0 0-.094.3l.173.569c.078.255-.213.462-.423.3l-.417-.324a.267.267 0 0 0-.328 0l-.417.323c-.21.163-.5-.043-.423-.299l.173-.57a.277.277 0 0 0-.094-.299l-.468-.363c-.206-.16-.095-.493.164-.493h.55a.271.271 0 0 0 .259-.194l.162-.53z"/>
                       </svg>
-                      Telefones
+                      imobiliária
                       <!--Submenu 1do nosso site-->
                       <ul class="nav flex-column">
                         <li class="nav-item"><a href="#">Lancamestos</a></li>
@@ -153,9 +112,9 @@
                             <!--Listagem de produtos-->
                             <a href="./compra.html" class="produtos-container col-md-3">
                               <!--Imagem do produto-->
-                             <img src="./img/iphone14-pro-lineup.png" class="img-fluid" alt="Iphones disponivel">
+                             <img src="img/armario.jpeg" class="img-fluid" alt="Iphones disponivel">
                              <article class="produtos-itens">
-                                 <h2>Iphones 14</h2>
+                                 <h2>Armario </h2>
                                  <!--Estrelas -->
                                  <div class="produtos-stars">
                                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
@@ -175,7 +134,7 @@
                                        </svg>
                                  </div>
                                  <strong class="produtos-preco">
-                                     R$ 450,000.00
+                                     kz 450,000.00
                                  </strong>
          
                              </article>
@@ -186,9 +145,9 @@
                          <!--Listagem de produtos-->
                          <a href="#" class="produtos-container col-md-3">
                              <!--Imagem do produto-->
-                            <img src="./img/images.jpg" class="img-fluid" alt="Iphones disponivel">
+                            <img src="img/mesa.jpeg" class="img-fluid" alt="Iphones disponivel">
                             <article class="produtos-itens">
-                                <h2>samsung galaxy</h2>
+                                <h2>Mesa</h2>
                                 <!--Estrelas -->
                                 <div class="produtos-stars">
                  
@@ -206,7 +165,7 @@
                                       </svg>
                                 </div>
                                 <strong class="produtos-preco">
-                                    R$ 350,000.00
+                                    kz 350,000.00
                                 </strong>
          
                             </article>
@@ -215,9 +174,9 @@
                         <!--Listagem de produtos-->
                         <a href="#" class="produtos-container col-md-3">
                          <!--Imagem do produto-->
-                        <img src="./img/baixados.jpg" class="img-fluid" alt="Iphones disponivel">
+                        <img src="img/cuzinha.jpg" class="img-fluid" alt="Iphones disponivel">
                         <article class="produtos-itens">
-                            <h2>samsung S12</h2>
+                            <h2>cozinha</h2>
                             <!--Estrelas -->
                             <div class="produtos-stars">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
@@ -237,7 +196,7 @@
                                   </svg>
                             </div>
                             <strong class="produtos-preco">
-                                R$ 450,000.00
+                                kz 450,000.00
                             </strong>
          
                         </article>
@@ -247,7 +206,7 @@
          
                      <a href="#" class="produtos-container col-md-3">
                      <!--Imagem do produto-->
-                    <img src="./img/computador.jpg" class="img-fluid" alt="Iphones disponivel">
+                    <img src="img/imagem20.jpeg" class="img-fluid" alt="Iphones disponivel">
                     <article class="produtos-itens">
                         <h2>computador</h2>
                         <!--Estrelas -->
@@ -278,7 +237,7 @@
                    <!--fim Listagem de produtos-->
             </article>
             <div class="row d-flex justify-content-center">
-            <button type="button" class="btn btn-primary col-md-2"><a href="./vejamais.html" style="color: #fff;">Veja masis</a></button>
+            <button type="button" class="btn btn-primary col-md-2"><a href="./vejamais.html" style="color: #fff; text-decoration: none;">Veja masis</a></button>
             </div>
  
         </section>
