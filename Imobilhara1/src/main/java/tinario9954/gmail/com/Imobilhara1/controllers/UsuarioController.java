@@ -1,8 +1,11 @@
 package tinario9954.gmail.com.Imobilhara1.controllers;
 
-import org.springframework.beans.factory.annotation.Autowired;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+
 
 @Controller
 public class UsuarioController {
@@ -20,11 +23,16 @@ public class UsuarioController {
   public String login() {
     return "login/login";
   }
+ 
+  // Fazer o login
+
+
 
   @GetMapping("/cadastras")
   public String cadastra() {
     return "login/cadastra";
   }
+
 
   /*
    * @PostMapping("/logar")

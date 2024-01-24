@@ -1,21 +1,36 @@
 package tinario9954.gmail.com.Imobilhara1.model;
 
+import jakarta.persistence.EmbeddedId;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+import tinario9954.gmail.com.Imobilhara1.model.chaves.PessoaFk;
+
+@Entity
+@Table(name = "Pessoas")
 public class pessoa {
 
-    private Integer Idpesso;
-    private String nome;
-    private String sobreNome;
-    private String email;
-    private String endereco;
-    private String telefone;
-    private String genero;
-    private String dataNas;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    protected Long Idpesso;
 
-    public Integer getIdpesso() {
+    protected String nome;
+    protected String sobreNome;
+    protected String email;
+    protected String genero;
+    protected String telefone;
+    protected String dataNas;
+    // chaves estrageras
+    @EmbeddedId
+    private PessoaFk pessoaFk = new PessoaFk();
+
+    public Long getIdpesso() {
         return Idpesso;
     }
 
-    public void setIdpesso(Integer idpesso) {
+    public void setIdpesso(Long idpesso) {
         Idpesso = idpesso;
     }
 
@@ -43,14 +58,6 @@ public class pessoa {
         this.email = email;
     }
 
-    public String getEndereco() {
-        return endereco;
-    }
-
-    public void setEndereco(String endereco) {
-        this.endereco = endereco;
-    }
-
     public String getTelefone() {
         return telefone;
     }
@@ -76,16 +83,20 @@ public class pessoa {
     }
 
     // Gera construtor da nossa classe
-    public pessoa(Integer idpesso, String nome, String sobreNome, String email, String endereco, String telefone,
-            String genero, String dataNas) {
+    public pessoa(Long idpesso, String nome, String sobreNome, String email, String genero, String telefone,
+            String dataNas, Usuario useUsuario, Gestor gestor, Administrador admin) {
+
         Idpesso = idpesso;
         this.nome = nome;
         this.sobreNome = sobreNome;
         this.email = email;
-        this.endereco = endereco;
-        this.telefone = telefone;
         this.genero = genero;
+        this.telefone = telefone;
         this.dataNas = dataNas;
+        
+        this.pessoaFk.setFkuser(useUsuario);
+        this.pessoaFk.setAdmin(admin);
+        this.pessoaFk.setGestor(gestor);
     }
 
 }

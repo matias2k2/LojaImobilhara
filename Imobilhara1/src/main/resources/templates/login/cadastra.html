@@ -5,15 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Academeinha</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/cadastro.css">
+
+    
 </head>
 <body>
 
     <div class="container1">
+        
         <div class="form-image">
             <img src="./img/undraw_empty_cart_co35.svg" alt="">
         </div>
+
         <div class="from">
             <form action="/validar" method="POST">
                 <!--Nosso cabecalho do fromulario -->
@@ -25,60 +27,72 @@
                          <button> <a th:href="@{/}">Home</a></button>
                     </div>
                  </div>
-
-                                     <!--Aria do nosso input de testes ETC-->
+                <!--Aria do nosso input de testes ETC-->
                 <div class="input-group">
                     
                     <div class="input-box">
                          <label for="firstname">Primero nome</label>
-                         <input type="text" name="IDfirstname" id="IDfirstname" placeholder="Digite o seu primero nome" required>
+                         <input type="text" name="nome" id="IDfirstname" placeholder="Digite o seu primero nome" required>
                     </div>
+
                     <div class="input-box">
                      <label for="lastname">Sobrenome</label>
-                     <input type="text" name="lastname" id="IDlastname" placeholder="Digite o seu sobre nome" required>
+                     <input type="text" name="sobrenome" id="IDlastname" placeholder="Digite o seu sobre nome" required>
                      </div>
+
                      <div class="input-box">
                          <label for="email">Email</label>
                          <input type="email" name="email" id="IDemail" placeholder="Email" required>
                     </div>
 
+                   
                     <div class="input-box">
                         <label for="lastname">Genero</label>
                         <input type="text" name="genero" id="IDlastname" placeholder="Genero" required>
                     </div>
 
-
+                    <div class="input-box">
+                        <label for="tipo">Escolha o Tipo:</label>
+                        <select name="perfil" id="tipo">
+                            <option value="gestor">Gestor</option>
+                            <option value="administrador">Administrador</option>
+                            <option value="cliente">Cliente</option>
+                        </select>
+                    </div>
 
                     <div class="input-box">
-                        <label for="password">Confirme Senha</label>
-                        <input type="password" name="senha" id="IDpassword" placeholder="Confime Senha" required>
+
+                        <label for="data">Escolha uma data:</label>
+                        <input type="date" id="data" name="data" required>
+
                     </div>
                     
                     <div class="input-box">
                      <label for="telefone">  Telefone</label>
                      <input type="tel" name="telefone" id="IDtelefone" placeholder="telefone" required>
-                     </div>
+                    </div>
+
                      <div class="input-box">
                          <label for="password">Senha</label>
-                         <input type="password" name="senha" id="IDpassword" placeholder="Senha" required>
-                     </div>
-                     <div class="input-box">
-                         <label for="password">Confirme Senha</label>
-                         <input type="password" name="senha" id="IDpassword" placeholder="Confime Senha" required>
+                         <input type="password" name="senha" id="senha" placeholder="Senha" required>
                      </div>
 
+                     <div class="input-box">
+                         <label for="password">Confirme Senha</label>
+                         <input type="password" name="ConfirmeSenha" id="idConf" placeholder="Confime Senha" required>
+                    </div>
 
             </div>
               <!--Fim Aria-->
 
                 <div class="gender-inputs">
-                    <div class="gender-title">
+                    <div class="gender-title" >
                         <h6>Genero</h6>
                     </div>
                     <!--Os generos estao armazenado aqui -->             
 
                 <div class="continue-button">
-                    <button><a href="./indexHome.html">Confirmar</a></button>
+                    <button><a th:href="@{/}">Confirmar</a></button>
                 </div>
  
             </form>
@@ -86,11 +100,6 @@
         </div>
     </div>
 
-
-   
-
-            
-   
    <script src ="js/jquery.spec.js"></script>
    <script src="js/bootstrap.js"></script>
    <script src ="js/script.js"></script>
